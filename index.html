@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Salvaguardia del Bordado Maya Yucateco</title>
+    <style>
+        /* Importamos Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset básico y asegurar que la página cubra el viewport completo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Fondo que cubre toda la pantalla sin repetirse */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('pics/bordado.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Contenedor central (overlay) */
+.overlay {
+    position: relative;
+    margin: 20px auto;
+    background: rgba(144, 104, 167, 0.7); /* Morado con 50% de transparencia */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.overlay h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.overlay h2 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo común para botones y el botón principal del dropdown */
+.btn,
+.dropdown-btn {
+    background: #6A2687;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transition: background 0.3s;
+    cursor: pointer;
+    font-size: 1.2em;
+    border: none;
+}
+
+.btn:hover,
+.dropdown-btn:hover {
+    background: #9068A7;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Contenido del dropdown: oculto por defecto */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #9068A7;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    z-index: 100;
+}
+
+/* Opciones del dropdown */
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background: #9068A7;
+}
+
+/* Mostrar dropdown al pasar el cursor sobre el contenedor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Descripción */
+.description {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    max-width: 600px;
+    text-align: justify;
+}
+
+/* Imagen centrada encima del título */
+.pleca-acapulco {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Submenú dentro del dropdown */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > a::after {
+    content: "▶";
+    float: right;
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+/* Contenedor del submenú oculto por defecto */
+.dropdown-submenu-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #007BFF;
+    border-radius: 0 4px 4px 4px;
+    min-width: 200px;
+    z-index: 101;
+}
+
+/* Mostrar submenú al pasar el cursor */
+.dropdown-submenu:hover .dropdown-submenu-content {
+    display: block;
+}
+
+/* Estilo para enlaces dentro del submenú */
+.dropdown-submenu-content a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: block;
+    white-space: nowrap;
+    background-color: #007BFF;
+}
+
+.dropdown-submenu-content a:hover {
+    background-color: #0056b3;
+}
+
+
+        /* Descripción */
+        .description {
+            color: #fff;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            max-width: 600px;
+            text-align: justify;
+        }
+        /* Imagen centrada encima del título */
+        .pleca-acapulco {
+            display: block;
+            margin: 0 auto 10px auto; /* Centra y añade espacio debajo */
+            max-width: 400px; /* Controla el tamaño máximo */
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        
+        <img src="pics/Pleca_Bordado_Blanco.png" alt="Pleca Acapulco" class="pleca-acapulco">
+        <br>
+        <h1>Plan de Salvaguardia del Bordado Maya Yucateco</h1>
+        
+        <div class="button-container">
+            
+            <a class="btn" href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/00%20Informaci%C3%B3n%20general%20del%20circuito?csf=1&web=1&e=fa2Js9" target="_blank">
+                Plan Estatal del Bordado Maya Yucateco
+            </a>
+            <p class="description">
+                Este plan es un instrumento estratégico y participativo creado para proteger, revitalizar y promover el bordado
+                artesanal maya yucateco como una expresión viva del patrimonio cultural. Fue desarrollado con la colaboración de más de
+               <strong>320</strong> bordadoras provenientes de <strong>12 de los municipios mayormente representativos del arte textil en Yucatán,</strong> en conjunto con la <strong>UNESCO</strong>, con
+                el financiamiento de <strong>Fundación Banorte</strong> y el respaldo del <strong>Gobierno del Estado</strong>.
+                <br><br>
+                El documento incluye un diagnóstico integral de la práctica del bordado, así como un catálogo de acciones 
+                propuestas por la propia comunidad de bordadoras, orientadas a garantizar la preservación, transmisión y valorización de
+                esta manifestación cultural.
+            </p>
+
+            
+            <div class="dropdown">
+                <a class="dropdown-btn" href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea?csf=1&web=1&e=PKMsjt" target="_blank">
+                    Planes municipales
+                </a>
+            
+                <div class="dropdown-content">
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/01%20Fuerte%20de%20San%20Diego%20-%20Plaza%20M%C3%A9xico%E2%80%93Filipinas?csf=1&web=1&e=XhOy34" target="_blank">Fuerte de San Diego / Plaza México – Filipinas</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/02%20Museo%20de%20las%208%20Regiones?csf=1&web=1&e=prHUGr" target="_blank">Museo de las 8 Regiones</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/03%20Museo%20de%20la%20M%C3%A1scara?csf=1&web=1&e=dPRwab" target="_blank">Museo de la Máscara</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/04%20Museo%20Naval?csf=1&web=1&e=7hqjNJ" target="_blank">Museo Naval</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/05%20Edificio%20Oviedo?csf=1&web=1&e=L7dJna" target="_blank">Edificio Oviedo</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/06%20Z%C3%B3calo%20-%20Catedral?csf=1&web=1&e=LpcMI4" target="_blank">Zócalo / Catedral</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/07%20Casa%20de%20los%20Vientos?csf=1&web=1&e=Mxi4CR" target="_blank">Casa de los Vientos</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/08%20Fort%C3%ADn%20%C3%81lvarez?csf=1&web=1&e=cgMskA" target="_blank">Fortín Álvarez</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/09%20Centro%20Cultural%20Domingo%20Soler?csf=1&web=1&e=l22eJ1" target="_blank">Centro Cultural Domingo Soler</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/10%20Monumento%20al%20Gale%C3%B3n%20de%20Manila?csf=1&web=1&e=3MqTCl" target="_blank">Monumento al Galeón de Manila</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/11%20Plaza%20la%20Quebrada?csf=1&web=1&e=M5q3ad" target="_blank">Plaza la Quebrada</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/12%20Hotel%20Mirador-La%20Quebrada?csf=1&web=1&e=vKqiQ1" target="_blank">Hotel Mirador-La Quebrada</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/13%20Clavadistas%20de%20La%20Quebrada?csf=1&web=1&e=WihFV2" target="_blank">Clavadistas de La Quebrada</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/14%20Anfiteatro%20Sinfon%C3%ADa%20del%20Mar?csf=1&web=1&e=aSyOiH" target="_blank">Anfiteatro Sinfonía del Mar</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/15%20Playa%20La%20Angosta?csf=1&web=1&e=1WTZaC" target="_blank">Playa La Angosta</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/16%20Paseo%20del%20Pescador?csf=1&web=1&e=jgIopT" target="_blank">Paseo del Pescador</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/17%20Rotonda%20de%20las%20Mujeres%20y%20Hombres%20Ilustres?csf=1&web=1&e=dw6uvw" target="_blank">Rotonda de las Mujeres y Hombres Ilustres</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/18%20Edificio%20Estibadores?csf=1&web=1&e=Sffssj" target="_blank">Edificio Estibadores</a>
+                    <a
+                        href="https://unesco.sharepoint.com/:f:/r/sites/MexicoTeam/Shared%20Documents/Cultura/Acapulco/Circuito%20Bah%C3%ADa%20Hist%C3%B3rica/01%20Definici%C3%B3n%20del%20%C3%A1rea/19%20Casona%20de%20Ju%C3%A1rez?csf=1&web=1&e=6gOfGL" target="_blank">Casona de Juárez</a>
+                </div>
+                
+            </div>
+            <p class="description">
+                Los Planes Estatales de Salvaguardia son documentos diseñados para preservar y fortalecer expresiones culturales vivas,
+                como el arte textil, en regiones específicas. Su elaboración se basa en la participación activa de las comunidades
+                portadoras, quienes comparten sus saberes, necesidades y aspiraciones.
+                <br><br>
+                En esta sección se presentan los planes desarrollados por cada uno de los doce municipios que participaron en la
+                creación del Plan Estatal de Salvaguardia del Bordado Maya Yucateco. Cada plan incluye un catálogo de acciones
+                priorizadas, adaptadas a los contextos locales y enfocadas en atender los intereses particulares de cada comunidad
+                bordadora.
+            </p>
+            
+</body>
+
+</html>
