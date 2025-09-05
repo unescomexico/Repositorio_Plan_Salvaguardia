@@ -36,11 +36,13 @@
         }
 
         .pleca-acapulco {
-            max-width: 500px;
+            width: 100%;
+            max-width: 500px; /* se mantiene el límite en escritorio */
             height: auto;
             margin: 0 auto 15px auto;
             display: block;
         }
+
 
         h1 {
             font-size: 1.8em;
@@ -129,6 +131,10 @@
                 padding: 10px;
                 align-items: flex-start;
             }
+
+                .pleca-acapulco {
+                max-width: 100%; /* ocupa el ancho del contenedor */
+            }   
 
             .overlay {
                 padding: 20px 15px;
