@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plan de Salvaguardia del Bordado Maya Yucateco</title>
+    <title>Plan de Salvaguardia del Bordado Maya en Yucatán</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -14,42 +14,48 @@
             box-sizing: border-box;
         }
 
-        html,
         body {
-            min-height: 100vh;
             font-family: 'Montserrat', sans-serif;
             background: url('pics/bordado.jpg') no-repeat center center fixed;
             background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            min-height: 100vh;
         }
 
         .overlay {
-            position: relative;
-            margin: 20px auto;
-            background: rgba(144, 104, 167, 0.7);
-            padding: 20px;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 25px;
+            max-width: 600px;
+            width: 100%;
             text-align: center;
-            width: 90%;
-            max-width: 800px;
-        }
-
-        .overlay h1 {
-            font-size: 2.2em;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-
-        .overlay h2 {
-            font-size: 1.6em;
-            color: #fff;
-            margin-bottom: 20px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
 
         .pleca-acapulco {
-            display: block;
-            margin: 0 auto 10px auto;
-            max-width: 500px;
+            width: 100%;
+            max-width: 500px; /* se mantiene el límite en escritorio */
             height: auto;
+            margin: 0 auto 15px auto;
+            display: block;
+        }
+
+
+        h1 {
+            font-size: 1.8em;
+            color: #7D0725;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 0.95em;
+            color: #333;
+            margin: 10px auto 20px auto;
+            line-height: 1.5;
+            text-align: justify;
         }
 
         .button-container {
@@ -65,143 +71,87 @@
             color: #fff;
             padding: 15px;
             text-decoration: none;
-            border-radius: 6px;
-            display: inline-block;
+            border-radius: 12px;
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
             text-align: center;
-            transition: background 0.3s;
-            cursor: pointer;
-            font-size: 1.1em;
-            border: none;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            display: block;
         }
 
         .btn:hover,
         .dropdown-btn:hover {
             background: #9068A7;
+            transform: translateY(-2px);
         }
 
-        .description {
-            color: #fff;
-            font-size: 0.95em;
-            margin: 10px auto 20px auto;
-            max-width: 600px;
-            text-align: justify;
-        }
-
+        /* Dropdown */
         .dropdown {
-            position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .dropdown-btn {
+            cursor: pointer;
+            border: none;
         }
 
         .dropdown-content {
             display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
+            flex-direction: column;
             background: #9068A7;
-            width: 100%;
-            border-radius: 0 0 4px 4px;
-            z-index: 100;
+            margin-top: 5px;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .dropdown-content a {
-            display: block;
-            padding: 10px 15px;
+            padding: 12px;
             text-decoration: none;
             color: #fff;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.95em;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
             transition: background 0.3s;
-            text-align: left;
         }
 
         .dropdown-content a:hover {
             background: #7e4f9f;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .dropdown.active .dropdown-content {
+            display: flex;
         }
 
-        /* Submenú */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu>a::after {
-            content: "▶";
-            float: right;
-            margin-left: 10px;
-            font-size: 0.8em;
-        }
-
-        .dropdown-submenu-content {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            background: #007BFF;
-            border-radius: 0 4px 4px 4px;
-            min-width: 200px;
-            z-index: 101;
-        }
-
-        .dropdown-submenu:hover .dropdown-submenu-content {
-            display: block;
-        }
-
-        .dropdown-submenu-content a {
-            padding: 10px 15px;
-            text-decoration: none;
-            color: #fff;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            display: block;
-            white-space: nowrap;
-            background-color: #007BFF;
-        }
-
-        .dropdown-submenu-content a:hover {
-            background-color: #0056b3;
-        }
-
-        /* RESPONSIVE */
+        /* Responsive */
         @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                align-items: flex-start;
+            }
+
+                .pleca-acapulco {
+                max-width: 100%; /* ocupa el ancho del contenedor */
+            }   
+
             .overlay {
-                padding: 15px;
+                padding: 20px 15px;
             }
 
-            .overlay h1 {
-                font-size: 1.6em;
-            }
-
-            .overlay h2 {
-                font-size: 1.2em;
+            h1 {
+                font-size: 1.4em;
             }
 
             .btn,
             .dropdown-btn {
-                font-size: 1em;
+                font-size: 0.9em;
                 padding: 12px;
             }
 
             .description {
-                font-size: 0.95em;
-                padding: 0 10px;
-            }
-
-            .dropdown-content {
-                position: relative;
-            }
-
-            .dropdown-submenu-content {
-                position: relative;
-                top: auto;
-                left: auto;
-            }
-
-            .dropdown-submenu>a::after {
-                content: "";
+                font-size: 0.9em;
             }
         }
     </style>
@@ -209,56 +159,62 @@
 
 <body>
     <div class="overlay">
-        <img src="pics/Pleca_Bordado_Blanco.png" alt="Pleca Acapulco" class="pleca-acapulco">
-        <h1>Plan de Salvaguardia del Bordado Maya Yucateco</h1>
+        <img src="pics/Pleca_Bordado.png" alt="Pleca Bordado" class="pleca-acapulco">
+        <h1>Plan de Salvaguardia del Bordado Maya en Yucatán</h1>
 
         <div class="button-container">
             <a class="btn" href="visores/plan_estatal.html" target="_blank">
-                Plan Estatal del Bordado Maya Yucateco
+                Plan Estatal del Bordado Maya en Yucatán
             </a>
 
             <p class="description">
                 Este plan es un instrumento estratégico y participativo creado para proteger, revitalizar y promover el
                 bordado
                 artesanal maya yucateco como una expresión viva del patrimonio cultural. Fue desarrollado con la
-                colaboración de más de
-                <strong>320</strong> bordadoras provenientes de <strong>12 municipios representativos del arte textil en
-                    Yucatán</strong>, en conjunto con la <strong>UNESCO</strong>, financiado por <strong>Fundación
-                    Banorte</strong> y respaldado por el <strong>Gobierno del Estado</strong>.
+                colaboración de
+                más de <strong>350</strong> bordadoras provenientes de <strong>23 municipios</strong>, en conjunto con
+                la
+                <strong>UNESCO</strong>, financiado por <strong>Fundación Banorte</strong> y respaldado por el
+                <strong>Gobierno del Estado</strong>.
             </p>
 
             <div class="dropdown">
                 <button class="dropdown-btn">Planes municipales</button>
                 <div class="dropdown-content">
-                    <a href="visores/plan_abala.html" target="_blank">Plan de Salvaguardia de Abalá</a>
-                    <a href="visores/plan_dzan.html" target="_blank">Plan de Salvaguardia de Dzán</a>
-                    <a href="visores/plan_hoctun.html" target="_blank">Plan de Salvaguardia de Hoctún</a>
-                    <a href="visores/plan_izamal.html" target="_blank">Plan de Salvaguardia de Izamal</a>
-                    <a href="visores/plan_mani.html" target="_blank">Plan de Salvaguardia de Maní</a>
-                    <a href="visores/plan_muna.html" target="_blank">Plan de Salvaguardia de Muna</a>
-                    <a href="visores/plan_oxkutzcab.html" target="_blank">Plan de Salvaguardia de Oxkutzcab</a>
-                    <a href="visores/plan_tahdziu.html" target="_blank">Plan de Salvaguardia de Tahdziú</a>
-                    <a href="visores/plan_teabo.html" target="_blank">Plan de Salvaguardia de Teabo</a>
-                    <a href="visores/plan_tekax.html" target="_blank">Plan de Salvaguardia de Tekax</a>
-                    <a href="visores/plan_tekit.html" target="_blank">Plan de Salvaguardia de Tekit</a>
-                    <a href="visores/plan_valladolid.html" target="_blank">Plan de Salvaguardia de Valladolid</a>
+                    <a href="visores/plan_abala.html" target="_blank">Abalá</a>
+                    <a href="visores/plan_dzan.html" target="_blank">Dzán</a>
+                    <a href="visores/plan_hoctun.html" target="_blank">Hoctún</a>
+                    <a href="visores/plan_izamal.html" target="_blank">Izamal</a>
+                    <a href="visores/plan_mani.html" target="_blank">Maní</a>
+                    <a href="visores/plan_muna.html" target="_blank">Muna</a>
+                    <a href="visores/plan_oxkutzcab.html" target="_blank">Oxkutzcab</a>
+                    <a href="visores/plan_tahdziu.html" target="_blank">Tahdziú</a>
+                    <a href="visores/plan_teabo.html" target="_blank">Teabo</a>
+                    <a href="visores/plan_tekax.html" target="_blank">Tekax</a>
+                    <a href="visores/plan_tekit.html" target="_blank">Tekit</a>
+                    <a href="visores/plan_valladolid.html" target="_blank">Valladolid</a>
                 </div>
             </div>
 
             <p class="description">
                 Los Planes Estatales de Salvaguardia son documentos diseñados para preservar y fortalecer expresiones
-                culturales vivas,
-                como el arte textil, en regiones específicas. Su elaboración se basa en la participación activa de las
-                comunidades
-                portadoras, quienes comparten sus saberes, necesidades y aspiraciones.
-                <br><br>
-                En esta sección se presentan los planes desarrollados por cada uno de los doce municipios que
-                participaron en la
-                creación del Plan Estatal. Cada plan incluye un catálogo de acciones priorizadas, adaptadas a los
-                contextos locales.
+                culturales
+                vivas, como el arte textil, en regiones específicas. Su elaboración se basa en la participación activa
+                de las
+                comunidades portadoras. Cada plan incluye un catálogo de acciones priorizadas, adaptadas a los contextos
+                locales.
             </p>
         </div>
     </div>
+
+    <script>
+        // Manejo del dropdown para móviles
+        document.querySelectorAll('.dropdown-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
